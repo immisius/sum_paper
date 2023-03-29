@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF Summarizer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>PDF Summarizer</h1>
+      <form method="POST" action="/upload" enctype="multipart/form-data">
+        <div class="file-input">
+          <input type="file" id="file-input" name="file" accept=".pdf">
+          <label for="file-input">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload">
+              <path d="M17 16L12 11M12 11L7 16M12 11V4" />
+            </svg>
+            Choose a PDF file
+          </label>
+        </div>
+        <div class="submit">
+          <button type="submit">Summarize</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

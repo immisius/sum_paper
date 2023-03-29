@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document Summarization</title>
+    <style>
+        .container{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .input-section {
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .output-section {
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .summary {
+            font-weight: bold;
+        }
+        /* 画面サイズが小さい場合はinput-sectionの横幅を30%にする */
+        @media screen and (max-width: 600px) {
+            .input-section {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Document Summarization</h1>
+    <div class="container">
+    <div class="input-section">
+        <h2>Input Text</h2>
+        <p>{{ input_text }}</p>
+    </div>
+    <div class="output-section">
+        <h2>Summary</h2>
+        <p class="summary">{{ summary_text }}</p>
+    </div>
+</div>
+</body>
+</html>
